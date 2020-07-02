@@ -7,11 +7,11 @@ export default (props) => {
   return (
     <div className="Box__Item">
       <input type="checkbox" id="mycheck" />
-      <label className="Label__Styling">Revenue</label>
+      <label className="Label__Styling">{props.children}</label>
       <button className="Dropdown__Item" onClick={() => setOpen(!open)}>
         V
       </button>
-      {open ? <p>drop down</p> : <p></p>}
+      {open ? props.value : <p></p>}
     </div>
   );
 };
