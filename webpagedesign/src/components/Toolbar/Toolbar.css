@@ -1,0 +1,29 @@
+.Toolbar {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 56px;
+}
+.Toolbar__nav {
+  display: flex;
+}
+
+.Toolbar__logo {
+  display: flex;
+}
+.Toolbar__logo__title h1 {
+  margin: 0px 10px;
+}
+.Toolbar__logo__title p {
+  margin: 0px 10px;
+}
+
+.Toolbar__navigation-items ul {
+  display: flex;
+}
+
+.Toolbar__navigation-items ul li {
+  list-style-type: none;
+  margin-left: 20px;
+}

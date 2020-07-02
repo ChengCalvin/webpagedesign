@@ -1,0 +1,15 @@
+.Box__Item {
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+.Dropdown__Item {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.Label__Styling {
+  padding-right: 300px;
+  padding-left: 25px;
+}
