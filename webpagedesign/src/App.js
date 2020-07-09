@@ -5,12 +5,12 @@ import MetricBox from "./components/MetricBox/MetricBox";
 import IncomeStatementBox from "./components/IncomeStatementBox/IncomeStatementBox";
 import CashFlowBox from "./components/CashFlowBox/CashFlowBox";
 import Toolbarbot from "./components/Toolbar/Toolbarbot/Toolbarbot";
+import Scrollupbutton from "./components/Scrollupbutton/Scrollupbutton";
 
 function App() {
   return (
     <div className="App">
       <Toolbar />
-
       <main
         style={{
           marginTop: "100px",
@@ -39,12 +39,22 @@ function App() {
           justifyContent: "center",
           marginTop: "50px",
           borderTop: "1px solid gray",
-          marginBottom: "100px",
+          marginBottom: "50px",
         }}
       >
         <CashFlowBox />
       </div>
       <Toolbarbot />
+      <div
+        style={{
+          marginBottom: "100px",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <div></div>
+        <Scrollupbutton />
+      </div>
     </div>
   );
 }
