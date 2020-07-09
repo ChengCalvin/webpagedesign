@@ -1,12 +1,14 @@
 .Box__Item {
   border: 1px solid gray;
   padding: 5px;
+  display: flex;
 }
 
 .Dropdown__Item {
   border: none;
   background-color: white;
   cursor: pointer;
+  justify-content: flex-end;
 }
 
 .Label__Styling {
