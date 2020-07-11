@@ -1,7 +1,9 @@
 import React from "react";
 
+import "./ItemList.css";
+
 export default (props) => (
-  <li>
-    <a href="/">{props.children}</a>
-  </li>
+  <div className="Item__List" onClick={props.clicked}>
+    {props.children}
+  </div>
 );

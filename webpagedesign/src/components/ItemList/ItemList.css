@@ -1,0 +1,12 @@
+.Item__List {
+  display: flex;
+  border: 1px solid rgb(26, 149, 250);
+  border-radius: 20px;
+  margin: 5px;
+  padding: 7px;
+}
+
+.Item__List:hover {
+  cursor: pointer;
+  background-color: rgb(26, 149, 250);
+}

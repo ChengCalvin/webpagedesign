@@ -23,11 +23,6 @@
   margin: 0px 10px;
 }
 
-.Toolbar__navigation-items ul {
+.Toolbar__navigation-items {
   display: flex;
-}
-
-.Toolbar__navigation-items ul li {
-  list-style-type: none;
-  margin-left: 20px;
 }
