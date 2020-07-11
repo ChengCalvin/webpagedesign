@@ -29,27 +29,31 @@ const Toolbar = (props) => {
           <ItemList clicked={showModal}>Who Made this?</ItemList>
           {toggleModal1 ? (
             <Modal show={toggleModal1} clicked={showModal}>
-              <p
+              <div
                 style={{
                   display: "flex",
                   justifyContent: "center",
+                  marginTop: "200px",
+                  color: "white",
                 }}
               >
                 Frequently Asked Question
-              </p>
+              </div>
             </Modal>
           ) : null}
           <ItemList clicked={showModal2}>FAQ</ItemList>
           {toggleModal2 ? (
             <Modal show={toggleModal2} clicked={showModal2}>
-              <p
+              <div
                 style={{
                   display: "flex",
                   justifyContent: "center",
+                  marginTop: "200px",
+                  color: "white",
                 }}
               >
                 Frequently Asked Question 2
-              </p>
+              </div>
             </Modal>
           ) : null}
           <ItemList>Share</ItemList>
