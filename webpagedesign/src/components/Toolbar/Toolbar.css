@@ -11,6 +11,7 @@
 .Toolbar__nav {
   background-color: white;
   display: flex;
+  justify-content: space-between;
 }
 
 .Toolbar__logo {

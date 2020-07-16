@@ -4,6 +4,6 @@ import "./ItemList.css";
 
 export default (props) => (
   <div className="Item__List" onClick={props.clicked}>
-    {props.children}
+    <div className="Text-alignment">{props.children}</div>
   </div>
 );
