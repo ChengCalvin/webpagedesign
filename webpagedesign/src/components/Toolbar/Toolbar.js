@@ -4,16 +4,24 @@ import "./Toolbar.css";
 import Logo from "../Logo/Logo";
 import ItemList from "../ItemList/ItemList";
 import Modal from "../Modal/Modal";
+import DrawerToggle from "../SideDrawer/DrawerToggle";
+import SideDrawer from "../SideDrawer/SideDrawer";
+import Backdrop from "../Backdrop/Backdrop";
 
 const Toolbar = (props) => {
   const [toggleModal1, setToggleModal1] = useState(false);
   const [toggleModal2, setToggleModal2] = useState(false);
+  const [ToggleDrawer, setToggleDrawer] = useState(false);
 
-  const showModal = (event) => {
+  const showModal = () => {
     setToggleModal1((toggleModal1) => !toggleModal1);
   };
-  const showModal2 = (event) => {
+  const showModal2 = () => {
     setToggleModal2((toggleModal2) => !toggleModal2);
+  };
+
+  const drawerClickHandler = () => {
+    setToggleDrawer((ToggleDrawer) => !ToggleDrawer);
   };
   return (
     <header className="Toolbar">
@@ -58,6 +66,12 @@ const Toolbar = (props) => {
           ) : null}
           <ItemList>Share</ItemList>
           <ItemList>More Tools by NorthOne</ItemList>
+          <DrawerToggle clicked={drawerClickHandler} />
+          {ToggleDrawer ? (
+            <Backdrop show={ToggleDrawer} clicked={drawerClickHandler}>
+              <SideDrawer />
+            </Backdrop>
+          ) : null}
         </div>
       </nav>
     </header>

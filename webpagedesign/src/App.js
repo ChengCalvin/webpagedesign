@@ -9,8 +9,9 @@ import Scrollupbutton from "./components/Scrollupbutton/Scrollupbutton";
 
 function App() {
   return (
-    <div className="App">
+    <div style={{ height: "100%" }}>
       <Toolbar />
+
       <main
         style={{
           marginTop: "100px",
@@ -18,7 +19,7 @@ function App() {
           justifyContent: "center",
           alignItems: "center",
           overflow: "hidden",
-          zIndex: "9999",
+          zIndex: "8000",
         }}
       >
         <MetricBox />
@@ -44,10 +45,9 @@ function App() {
       >
         <CashFlowBox />
       </div>
-      <Toolbarbot />
       <div
         style={{
-          marginBottom: "100px",
+          marginBottom: "10px",
           display: "flex",
           justifyContent: "space-between",
         }}
@@ -55,6 +55,7 @@ function App() {
         <div></div>
         <Scrollupbutton />
       </div>
+      <Toolbarbot />
     </div>
   );
 }

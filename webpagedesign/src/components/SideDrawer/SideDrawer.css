@@ -1,0 +1,11 @@
+.Side__Drawer {
+  height: 100%;
+  background: white;
+  box-shadow: 2px 0px 5px black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  max-width: 400px;
+  z-index: 9999;
+}
