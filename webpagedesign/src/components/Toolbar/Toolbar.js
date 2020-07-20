@@ -68,9 +68,10 @@ const Toolbar = (props) => {
           <ItemList>More Tools by NorthOne</ItemList>
           <DrawerToggle clicked={drawerClickHandler} />
           {ToggleDrawer ? (
-            <Backdrop show={ToggleDrawer} clicked={drawerClickHandler}>
+            <>
+              <Backdrop show={ToggleDrawer} clicked={drawerClickHandler} />
               <SideDrawer />
-            </Backdrop>
+            </>
           ) : null}
         </div>
       </nav>
