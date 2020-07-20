@@ -2,11 +2,14 @@
   border: 1px solid gray;
   padding: 5px;
   display: flex;
+}
+.Label__Dropdown-item__Spacing {
+  padding: 0.7rem;
   justify-content: space-between;
 }
 
 .Checkbox__Style {
-  padding-top: 10px;
+  padding: 0.7rem;
 }
 
 .Dropdown__Item {
@@ -17,7 +20,7 @@
 
 .Label__Styling {
   margin: 1px;
-  padding: 10px 40px;
+  padding: 10px;
 }
 
 .Description__Box {
