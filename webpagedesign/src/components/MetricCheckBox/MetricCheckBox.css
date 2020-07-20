@@ -2,16 +2,26 @@
   border: 1px solid gray;
   padding: 5px;
   display: flex;
+  justify-content: space-between;
+}
+
+.Checkbox__Style {
+  padding-top: 10px;
 }
 
 .Dropdown__Item {
   border: none;
   background-color: white;
   cursor: pointer;
-  justify-content: flex-end;
 }
 
 .Label__Styling {
-  padding-right: 300px;
-  padding-left: 25px;
+  margin: 1px;
+  padding: 10px 40px;
+}
+
+.Description__Box {
+  padding: 10px;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
 }
