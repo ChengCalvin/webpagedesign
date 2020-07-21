@@ -5,7 +5,9 @@
 }
 .Label__Dropdown-item__Spacing {
   padding: 0.7rem;
+  display: flex;
   justify-content: space-between;
+  flex-grow: 1;
 }
 
 .Checkbox__Style {

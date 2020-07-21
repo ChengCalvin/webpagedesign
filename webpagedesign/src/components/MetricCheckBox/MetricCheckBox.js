@@ -14,11 +14,16 @@ export default (props) => {
           <input type="checkbox" id="mycheck" />
         </div>
         <div className="Label__Dropdown-item__Spacing">
-          <label className="Label__Styling">{props.children}</label>
-          <div
-            className="Dropdown__Item"
-            onClick={toggleDescriptionHandler}
-          ></div>
+          <div>
+            <label className="Label__Styling">{props.children}</label>
+          </div>
+
+          <div>
+            <div
+              className="Dropdown__Item"
+              onClick={toggleDescriptionHandler}
+            ></div>
+          </div>
         </div>
       </div>
       {open ? (
