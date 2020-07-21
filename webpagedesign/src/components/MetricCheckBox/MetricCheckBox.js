@@ -15,9 +15,10 @@ export default (props) => {
         </div>
         <div className="Label__Dropdown-item__Spacing">
           <label className="Label__Styling">{props.children}</label>
-          <button className="Dropdown__Item" onClick={toggleDescriptionHandler}>
-            V
-          </button>
+          <div
+            className="Dropdown__Item"
+            onClick={toggleDescriptionHandler}
+          ></div>
         </div>
       </div>
       {open ? (

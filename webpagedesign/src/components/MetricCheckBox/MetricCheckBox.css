@@ -13,7 +13,12 @@
 }
 
 .Dropdown__Item {
-  border: none;
+  border: solid rgb(51, 123, 238);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  padding: 4px;
   background-color: white;
   cursor: pointer;
 }
@@ -27,4 +32,5 @@
   padding: 10px;
   border-left: 1px solid gray;
   border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
 }
