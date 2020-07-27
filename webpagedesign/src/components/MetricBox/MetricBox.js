@@ -35,7 +35,7 @@ export default () => {
   ];
   return (
     <div className="MetricBox">
-      <div className="MetricBox__title">
+      <div>
         <h2>What should you be looking at?</h2>
         <p>Check these metrics to stay on top of your financial health</p>
       </div>

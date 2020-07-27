@@ -39,7 +39,7 @@
   display: none;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 921px) {
   .Toolbar__navigation-items {
     display: none;
   }

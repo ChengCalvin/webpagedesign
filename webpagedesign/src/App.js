@@ -26,28 +26,42 @@ function App() {
       </main>
       <div
         style={{
+          width: "85%",
+          borderBottom: "1px solid gray",
+          marginLeft: "5%",
+          marginTop: "5rem",
+        }}
+      ></div>
+      <div
+        style={{
           display: "flex",
           justifyContent: "center",
           marginTop: "50px",
-          borderTop: "1px solid gray",
         }}
       >
         <IncomeStatementBox />
       </div>
       <div
         style={{
+          width: "85%",
+          borderBottom: "1px solid gray",
+          marginLeft: "5%",
+          marginTop: "5rem",
+        }}
+      ></div>
+      <div
+        style={{
           display: "flex",
           justifyContent: "center",
           marginTop: "50px",
-          borderTop: "1px solid gray",
-          marginBottom: "50px",
+          marginBottom: "20px",
         }}
       >
         <CashFlowBox />
       </div>
       <div
         style={{
-          marginBottom: "10px",
+          marginBottom: "2px",
           display: "flex",
           justifyContent: "space-between",
         }}

@@ -4,24 +4,41 @@ import "./MetricCheckBox.css";
 
 export default (props) => {
   const [open, setOpen] = useState(false);
-  const toggleDescriptionHandler = () => {
+  const [isChecked, setIsChecked] = useState(false);
+  const descriptionBoxIsOpen = () => {
     setOpen((open) => !open);
   };
+  const isCheckedHandler = () => {
+    setIsChecked((isChecked) => !isChecked);
+  };
   return (
-    <div>
+    <div className="Box__Sizing">
       <div className="Box__Item">
         <div className="Checkbox__Style">
-          <input type="checkbox" id="mycheck" />
+          <div
+            className="Checkbox__Style-container"
+            style={{
+              backgroundColor: isChecked ? "rgb(0, 162, 255)" : "transparent",
+            }}
+            onClick={isCheckedHandler}
+          >
+            <div
+              className={
+                isChecked
+                  ? "Checkbox__Style-checked"
+                  : "Checkbox__Style-unchecked"
+              }
+            ></div>
+          </div>
         </div>
         <div className="Label__Dropdown-item__Spacing">
           <div>
             <label className="Label__Styling">{props.children}</label>
           </div>
-
           <div>
             <div
               className="Dropdown__Item"
-              onClick={toggleDescriptionHandler}
+              onClick={descriptionBoxIsOpen}
             ></div>
           </div>
         </div>
