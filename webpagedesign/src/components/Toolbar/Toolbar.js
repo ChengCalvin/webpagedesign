@@ -66,6 +66,8 @@ const Toolbar = (props) => {
           ) : null}
           <ItemList>Share</ItemList>
           <ItemList>More Tools by NorthOne</ItemList>
+        </div>
+        <div className="SideDrawer">
           <DrawerToggle clicked={drawerClickHandler} />
           {ToggleDrawer ? (
             <>

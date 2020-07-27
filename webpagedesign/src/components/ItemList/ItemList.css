@@ -3,13 +3,13 @@
   border-radius: 20px;
   margin: 15px 7px;
   padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 0.7rem;
 }
 
 .Item__List:hover {
   cursor: pointer;
   background-color: rgb(26, 149, 250);
-}
-
-.Text-alignment {
-  align-content: space-around;
 }

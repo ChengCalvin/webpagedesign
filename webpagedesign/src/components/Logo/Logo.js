@@ -1,12 +1,13 @@
 import React from "react";
 
 import Icon from "../../images/icon.png";
+import "./Logo.css";
 
 export default () => (
-  <div>
+  <div className="Logo">
     <a href="/">
       <img
-        style={{ height: "50px", width: "50px" }}
+        style={{ height: "3rem", width: "3rem" }}
         src={Icon}
         alt="icon"
       ></img>

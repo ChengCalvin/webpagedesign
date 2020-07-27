@@ -17,13 +17,44 @@
 .Toolbar__logo {
   display: flex;
 }
+.Toolbar__logo__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .Toolbar__logo__title h1 {
   margin: 0px 10px;
+  font-size: 1.1rem;
 }
 .Toolbar__logo__title p {
   margin: 0px 10px;
+  color: gray;
+  font-size: 0.7rem;
 }
 
 .Toolbar__navigation-items {
   display: flex;
+}
+.SideDrawer {
+  display: none;
+}
+
+@media (max-width: 414px) {
+  .Toolbar__navigation-items {
+    display: none;
+  }
+  .Toolbar__logo__title h1 {
+    font-size: 0.9rem;
+    margin: 5px 10px 5px;
+  }
+  .Toolbar__logo__title p {
+    font-size: 0.8rem;
+    margin: 0px 10px;
+    color: gray;
+  }
+  .SideDrawer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

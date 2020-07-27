@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 36px;
+  height: 24px;
   width: 30px;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 15px;
+  padding: 5px;
 }
 
 .Toggle-button:focus {
@@ -15,7 +15,7 @@
 }
 
 .Toggle-button_line {
-  width: 30px;
-  height: 3px;
-  background: gray;
+  width: 20px;
+  height: 1px;
+  background: black;
 }
