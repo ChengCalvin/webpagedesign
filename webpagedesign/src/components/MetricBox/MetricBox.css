@@ -7,9 +7,8 @@
   .MetricBox {
     width: 100%;
   }
-}
-
-.MetricBox h2 {
-  width: 70%;
-  margin-left: 4rem;
+  .MetricBox h2 {
+    width: 70%;
+    margin-left: 4rem;
+  }
 }

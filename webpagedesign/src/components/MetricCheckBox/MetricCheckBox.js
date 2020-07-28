@@ -35,9 +35,9 @@ export default (props) => {
           <div>
             <label className="Label__Styling">{props.children}</label>
           </div>
-          <div>
+          <div style={{ paddingTop: open ? "5px" : "" }}>
             <div
-              className="Dropdown__Item"
+              className={open ? "Dropdown__Icon-open" : "Dropdown__Icon"}
               onClick={descriptionBoxIsOpen}
             ></div>
           </div>

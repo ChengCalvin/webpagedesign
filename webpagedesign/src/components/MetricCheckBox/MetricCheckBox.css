@@ -40,12 +40,22 @@
   background-color: transparent;
 }
 
-.Dropdown__Item {
+.Dropdown__Icon {
   border: solid rgb(0, 162, 255);
   border-width: 0 4px 4px 0;
   display: inline-block;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+  padding: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+.Dropdown__Icon-open {
+  border: solid rgb(0, 162, 255);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
   padding: 4px;
   background-color: white;
   cursor: pointer;

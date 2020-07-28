@@ -6,7 +6,7 @@
   position: sticky;
 }
 .Toolbarbot__nav {
-  background-color: rgb(51, 123, 238);
+  background-color: rgb(0, 162, 255);
   display: flex;
   justify-content: space-between;
 }
