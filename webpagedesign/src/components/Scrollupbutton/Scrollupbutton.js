@@ -9,7 +9,7 @@ export default () => {
   return (
     <div className="Back__to__top__button">
       <img
-        style={{ width: "70px", height: "70px" }}
+        style={{ width: "55px", height: "55px" }}
         src={Backtotop}
         alt="back_to_top_button"
         onClick={scrollupHandler}

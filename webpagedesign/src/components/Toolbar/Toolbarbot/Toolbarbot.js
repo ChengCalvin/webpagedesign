@@ -4,7 +4,7 @@ import "./Toolbarbot.css";
 import Whitelogo from "../../../images/white logo.png";
 
 export default (props) => (
-  <header className="Toolbarbot">
+  <div className="Toolbarbot">
     <nav className="Toolbarbot__nav">
       <div className="Toolbarbot__logo">
         <img
@@ -19,5 +19,5 @@ export default (props) => (
         </p>
       </div>
     </nav>
-  </header>
+  </div>
 );
