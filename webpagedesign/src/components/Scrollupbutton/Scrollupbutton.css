@@ -1,2 +1,22 @@
+.Back__to__top__button{
+  width: 4rem;
+  height: 4rem;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 50px;
+  margin-right: 1.5rem;
+  position:fixed;
+}
 
+.Hide-button{
+  display: none;
+}
 
+@media (max-width: 921px){
+  .Back__to__top__button{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+    margin-bottom: 40px;
+  }
+}

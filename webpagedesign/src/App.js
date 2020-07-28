@@ -6,17 +6,17 @@ import IncomeStatementBox from "./components/IncomeStatementBox/IncomeStatementB
 import CashFlowBox from "./components/CashFlowBox/CashFlowBox";
 import Toolbarbot from "./components/Toolbar/Toolbarbot/Toolbarbot";
 import Scrollupbutton from "./components/Scrollupbutton/Scrollupbutton";
+import Progressbar from './components/Progressbar/Progressbar';
 
 function App() {
+
   return (
     <div>
       <Toolbar />
-      <div style={{top: '0', display: 'flex', flexWrap: 'wrap'}} >
-
-      </div>
+      <Progressbar />
       <main
         style={{
-          marginTop: "100px",
+          marginTop: "25px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -54,22 +54,14 @@ function App() {
           display: "flex",
           justifyContent: "center",
           marginTop: "50px",
-          marginBottom: "50px",
+          marginBottom: "90px",
         }}
       >
         <CashFlowBox />
       </div>
-      <div
-        style={{
-          bottom: '0',
-          right: '0',
-          marginBottom: "50px",
-          marginRight: '1.5rem',
-          position:'fixed'
-        }}
-      >
+
         <Scrollupbutton />
-      </div>
+
         <Toolbarbot />
     </div>
   );
