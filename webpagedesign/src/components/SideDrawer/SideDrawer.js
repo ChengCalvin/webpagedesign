@@ -15,10 +15,36 @@ export default (props) => {
   const showModal2 = (event) => {
     setToggleModal2((toggleModal2) => !toggleModal2);
   };
+  let topbarInfo = [
+    {Label: 'Who Made This?', Content: 'Fequently Asked Question'},
+    {Label: 'FAQ', Content: 'Frequently Asked Question 2'},
+    {Label: 'Share', Content: 'Please Share'},
+    {Label: 'More Tools by NorthOne', Content: 'Here are the all the tools'}]
+
   return (
     <nav className="Side__Drawer">
       <div>
-        <ItemList clicked={showModal}>Who Made this?</ItemList>
+        {topbarInfo.map((info => {
+          return (
+          <div key={info.Label}>
+          <ItemList clicked={showModal}>{info.Label}</ItemList>
+          {toggleModal1 ? (
+            <Modal show={toggleModal1} clicked={showModal}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "200px",
+                  color: "white",
+                }}
+              >
+                {info.Content}
+              </div>
+            </Modal>
+          ) : null}
+          </div>)
+        }))}
+        {/* <ItemList clicked={showModal}>Who Made this?</ItemList>
         {toggleModal1 ? (
           <Modal show={toggleModal1} clicked={showModal}>
             <div
@@ -33,6 +59,7 @@ export default (props) => {
             </div>
           </Modal>
         ) : null}
+
         <ItemList clicked={showModal2}>FAQ</ItemList>
         {toggleModal2 ? (
           <Modal show={toggleModal2} clicked={showModal2}>
@@ -49,7 +76,7 @@ export default (props) => {
           </Modal>
         ) : null}
         <ItemList>Share</ItemList>
-        <ItemList>More Tools by NorthOne</ItemList>
+        <ItemList>More Tools by NorthOne</ItemList> */}
       </div>
     </nav>
   );
