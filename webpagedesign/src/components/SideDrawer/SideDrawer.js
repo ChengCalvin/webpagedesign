@@ -6,30 +6,19 @@ import ItemList from "../ItemList/ItemList";
 import Modal from "../Modal/Modal";
 
 export default (props) => {
-  const [toggleModal1, setToggleModal1] = useState(false);
-  const [toggleModal2, setToggleModal2] = useState(false);
-
-  const showModal = (event) => {
-    setToggleModal1((toggleModal1) => !toggleModal1);
-  };
-  const showModal2 = (event) => {
-    setToggleModal2((toggleModal2) => !toggleModal2);
-  };
-  let topbarInfo = [
-    {Label: 'Who Made This?', Content: 'Fequently Asked Question'},
-    {Label: 'FAQ', Content: 'Frequently Asked Question 2'},
-    {Label: 'Share', Content: 'Please Share'},
-    {Label: 'More Tools by NorthOne', Content: 'Here are the all the tools'}]
-
+  const [modalOpen, setModalOpen] = useState(null);
   return (
     <nav className="Side__Drawer">
       <div>
-        {topbarInfo.map((info => {
-          return (
-          <div key={info.Label}>
-          <ItemList clicked={showModal}>{info.Label}</ItemList>
-          {toggleModal1 ? (
-            <Modal show={toggleModal1} clicked={showModal}>
+        {props.itemList.map((itemlist, i) => (
+          <div key={i}>
+            <ItemList clicked={() => setModalOpen(itemlist.id)}>
+              {itemlist.Question}
+            </ItemList>
+            <Modal
+              show={modalOpen === itemlist.id}
+              clicked={() => setModalOpen(null)}
+            >
               <div
                 style={{
                   display: "flex",
@@ -38,45 +27,11 @@ export default (props) => {
                   color: "white",
                 }}
               >
-                {info.Content}
+                {itemlist.Content}
               </div>
             </Modal>
-          ) : null}
-          </div>)
-        }))}
-        {/* <ItemList clicked={showModal}>Who Made this?</ItemList>
-        {toggleModal1 ? (
-          <Modal show={toggleModal1} clicked={showModal}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                marginTop: "200px",
-                color: "white",
-              }}
-            >
-              Frequently Asked Question
-            </div>
-          </Modal>
-        ) : null}
-
-        <ItemList clicked={showModal2}>FAQ</ItemList>
-        {toggleModal2 ? (
-          <Modal show={toggleModal2} clicked={showModal2}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                marginTop: "200px",
-                color: "white",
-              }}
-            >
-              Frequently Asked Question 2
-            </div>
-          </Modal>
-        ) : null}
-        <ItemList>Share</ItemList>
-        <ItemList>More Tools by NorthOne</ItemList> */}
+          </div>
+        ))}
       </div>
     </nav>
   );

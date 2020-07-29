@@ -20,24 +20,20 @@
 }
 
 .Checkbox__Style-container {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   border: 1px solid gray;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
 }
-
-.Checkbox__Style-checked {
-  margin: 0.12rem 0rem 0rem 0.39rem;
-  width: 4px;
-  height: 9.2px;
-  border: solid white;
-  border-width: 0 1.5px 1.5px 0;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+.CheckBox-styling {
+  padding: 0.8rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.Checkbox__Style-unchecked {
-  background-color: transparent;
+.CheckBox-styling img:hover {
+  cursor: pointer;
 }
 
 .Dropdown__Icon {

@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Toolbar from "./components/Toolbar/Toolbar";
 import Toolbarbot from "./components/Toolbar/Toolbarbot/Toolbarbot";
 import Scrollupbutton from "./components/Scrollupbutton/Scrollupbutton";
-import Progressbar from './components/Progressbar/Progressbar';
-import QuestionDisplay from './components/QuestionsDisplay/QuestionDisplay'
+import Progressbar from "./components/Progressbar/Progressbar";
+import QuestionDisplay from "./components/QuestionsDisplay/QuestionDisplay";
 
 function App() {
-
   return (
     <div>
       <Toolbar />
@@ -23,10 +22,8 @@ function App() {
       >
         <QuestionDisplay />
       </main>
-
-        <Scrollupbutton />
-
-        <Toolbarbot />
+      <Scrollupbutton />
+      <Toolbarbot />
     </div>
   );
 }

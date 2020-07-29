@@ -7,22 +7,27 @@ import Modal from "../Modal/Modal";
 import DrawerToggle from "../SideDrawer/DrawerToggle";
 import SideDrawer from "../SideDrawer/SideDrawer";
 import Backdrop from "../Backdrop/Backdrop";
+import ItemCheckedCounter from "../ItemCheckedCounter/ItemCheckedCounter";
 
 const Toolbar = (props) => {
-  const [toggleModal1, setToggleModal1] = useState(false);
-  const [toggleModal2, setToggleModal2] = useState(false);
   const [ToggleDrawer, setToggleDrawer] = useState(false);
-
-  const showModal = () => {
-    setToggleModal1((toggleModal1) => !toggleModal1);
-  };
-  const showModal2 = () => {
-    setToggleModal2((toggleModal2) => !toggleModal2);
-  };
 
   const drawerClickHandler = () => {
     setToggleDrawer((ToggleDrawer) => !ToggleDrawer);
   };
+
+  const [itemList, setItemList] = useState([
+    { Question: "Who Made This?", Content: "Frequently Asked Question", id: 1 },
+    { Question: "FAQ", Content: "Frequently Asked Question 2", id: 2 },
+    { Question: "Share", Content: "Facebook, Twiter, Instagram", id: 3 },
+    {
+      Question: "More Tools by NorthOne",
+      Content: "Here are all the tools",
+      id: 4,
+    },
+  ]);
+  const [modalOpen, setModalOpen] = useState(null);
+
   return (
     <header className="Toolbar">
       <nav className="Toolbar__nav">
@@ -33,46 +38,41 @@ const Toolbar = (props) => {
             <p>powered by NorthOne</p>
           </div>
         </div>
-        <div className="Toolbar__navigation-items">
-          <ItemList clicked={showModal}>Who Made this?</ItemList>
-          {toggleModal1 ? (
-            <Modal show={toggleModal1} clicked={showModal}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  marginTop: "200px",
-                  color: "white",
-                }}
-              >
-                Frequently Asked Question
-              </div>
-            </Modal>
-          ) : null}
-          <ItemList clicked={showModal2}>FAQ</ItemList>
-          {toggleModal2 ? (
-            <Modal show={toggleModal2} clicked={showModal2}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  marginTop: "200px",
-                  color: "white",
-                }}
-              >
-                Frequently Asked Question 2
-              </div>
-            </Modal>
-          ) : null}
-          <ItemList>Share</ItemList>
-          <ItemList>More Tools by NorthOne</ItemList>
+        <div>
+          {/* <ItemCheckedCounter>{props.itemCheckedCounter}</ItemCheckedCounter> */}
         </div>
+
+        <div className="Toolbar__navigation-items">
+          {itemList.map((itemlist, i) => (
+            <div key={i}>
+              <ItemList clicked={() => setModalOpen(itemlist.id)}>
+                {itemlist.Question}
+              </ItemList>
+              <Modal
+                show={modalOpen === itemlist.id}
+                clicked={() => setModalOpen(null)}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginTop: "200px",
+                    color: "white",
+                  }}
+                >
+                  {itemlist.Content}
+                </div>
+              </Modal>
+            </div>
+          ))}
+        </div>
+
         <div className="SideDrawer">
           <DrawerToggle clicked={drawerClickHandler} />
           {ToggleDrawer ? (
             <>
               <Backdrop show={ToggleDrawer} clicked={drawerClickHandler} />
-              <SideDrawer />
+              <SideDrawer itemList={itemList} />
             </>
           ) : null}
         </div>

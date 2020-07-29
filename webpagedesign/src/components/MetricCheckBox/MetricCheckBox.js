@@ -1,36 +1,36 @@
 import React, { useState } from "react";
 
+import CheckedBox from "../../images/checked-box.png";
+
 import "./MetricCheckBox.css";
 
 export default (props) => {
   const [open, setOpen] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);
+
   const descriptionBoxIsOpen = () => {
     setOpen((open) => !open);
   };
-  const isCheckedHandler = () => {
-    setIsChecked((isChecked) => !isChecked);
-  };
+
   return (
     <div className="Box__Sizing">
       <div className="Box__Item">
-        <div className="Checkbox__Style">
-          <div
-            className="Checkbox__Style-container"
-            style={{
-              backgroundColor: isChecked ? "rgb(0, 162, 255)" : "transparent",
-            }}
-            onClick={isCheckedHandler}
-          >
-            <div
-              className={
-                isChecked
-                  ? "Checkbox__Style-checked"
-                  : "Checkbox__Style-unchecked"
-              }
-            ></div>
+        {props.boxChecked ? (
+          <div className="CheckBox-styling">
+            <img
+              style={{ width: "19px", height: "19px" }}
+              src={CheckedBox}
+              alt="Box-checked"
+              onClick={props.boxUnchecked}
+            />
           </div>
-        </div>
+        ) : (
+          <div className="Checkbox__Style">
+            <div
+              className="Checkbox__Style-container"
+              onClick={props.boxIsChecked}
+            />
+          </div>
+        )}
         <div className="Label__Dropdown-item__Spacing">
           <div>
             <label className="Label__Styling">{props.children}</label>
