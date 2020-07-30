@@ -63,6 +63,8 @@
     flex-direction: column;
     justify-content: center;
   }
+}
+@media (max-width: 1003px) {
   .CheckedBox__Counter {
     display: none;
   }
