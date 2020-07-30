@@ -8,8 +8,9 @@ export default (props) => {
         backgroundColor: "rgb(245, 245, 245)",
         width: "100%",
         height: "4px",
-        marginTop: "0.8rem",
+        marginTop: "4.3rem",
         position: "fixed",
+        top: "0",
       }}
     >
       <div

@@ -19,7 +19,11 @@ const Toolbar = (props) => {
   const [itemList, setItemList] = useState([
     { Question: "Who Made This?", Content: "Frequently Asked Question", id: 1 },
     { Question: "FAQ", Content: "Frequently Asked Question 2", id: 2 },
-    { Question: "Share", Content: "Facebook, Twiter, Instagram", id: 3 },
+    {
+      Question: "Share",
+      Content: "Starting your business should be easy. Feeling it?",
+      id: 3,
+    },
     {
       Question: "More Tools by NorthOne",
       Content: "Here are all the tools",
@@ -56,11 +60,19 @@ const Toolbar = (props) => {
                   style={{
                     display: "flex",
                     justifyContent: "center",
+                    alignItems: "center",
                     marginTop: "200px",
                     color: "white",
                   }}
                 >
-                  {itemlist.Content}
+                  <div
+                    style={{
+                      width: "300px",
+                      height: "50px",
+                    }}
+                  >
+                    {itemlist.Content}
+                  </div>
                 </div>
               </Modal>
             </div>

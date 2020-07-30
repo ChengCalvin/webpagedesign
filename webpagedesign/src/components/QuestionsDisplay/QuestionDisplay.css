@@ -1,5 +1,9 @@
 .Box-Display {
   width: 100%;
   text-align: center;
-  margin-top: 2rem;
+}
+@media (min-width: 1003px) {
+  .Box-Display {
+    margin-top: 3.5rem;
+  }
 }

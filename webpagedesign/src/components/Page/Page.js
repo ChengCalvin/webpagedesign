@@ -6,6 +6,8 @@ import Scrollupbutton from "../Scrollupbutton/Scrollupbutton";
 import Progressbar from "../Progressbar/Progressbar";
 import QuestionDisplay from "../QuestionsDisplay/QuestionDisplay";
 
+import "./Page.css";
+
 export default () => {
   const [Counter, setCounter] = useState(0);
 
@@ -19,9 +21,11 @@ export default () => {
     <div>
       <Toolbar counter={Counter} />
       <Progressbar counter={+((Counter / 15) * 100)} />
+      <div className="All__Done">
+        <div>All done</div>
+      </div>
       <main
         style={{
-          marginTop: "3.5rem",
           marginBottom: "25px",
           display: "flex",
           justifyContent: "center",
