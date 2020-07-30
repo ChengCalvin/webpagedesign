@@ -1,0 +1,40 @@
+import React, { useState } from "react";
+
+import Toolbar from "../Toolbar/Toolbar";
+import Toolbarbot from "../Toolbar/Toolbarbot/Toolbarbot";
+import Scrollupbutton from "../Scrollupbutton/Scrollupbutton";
+import Progressbar from "../Progressbar/Progressbar";
+import QuestionDisplay from "../QuestionsDisplay/QuestionDisplay";
+
+export default () => {
+  const [Counter, setCounter] = useState(0);
+
+  const checkAddUpdate = () => {
+    setCounter((Counter) => Counter + 1);
+  };
+  const checkSubtractUpdate = () => {
+    setCounter((Counter) => Counter - 1);
+  };
+  return (
+    <div>
+      <Toolbar counter={Counter} />
+      <Progressbar counter={+((Counter / 15) * 100)} />
+      <main
+        style={{
+          marginTop: "3.5rem",
+          marginBottom: "25px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <QuestionDisplay
+          checkAdd={checkAddUpdate}
+          checkSubtract={checkSubtractUpdate}
+        />
+      </main>
+      <Scrollupbutton />
+      <Toolbarbot />
+    </div>
+  );
+};

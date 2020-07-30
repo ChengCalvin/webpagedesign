@@ -1,26 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-export default () => {
-  const [scrolling, setScrolling] = useState(false);
-  const [scrollTop, setScrollTop] = useState(0);
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const onScroll = (event) => {
-      setScrollTop(event.target.documentElement.scrollTop);
-      setScrolling(event.target.documentElement.scrollTop > 0);
-    };
-    window.addEventListener("scroll", onScroll);
-    let width = parseInt(
-      (scrollTop /
-        (document.documentElement.scrollHeight -
-          document.documentElement.offsetHeight)) *
-        100
-    );
-    setWidth(width);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollTop]);
-
+export default (props) => {
   return (
     <div
       style={{
@@ -34,7 +14,7 @@ export default () => {
     >
       <div
         style={{
-          width: `${width}%`,
+          width: `${props.counter}%`,
           backgroundColor: "rgb(26, 149, 250)",
         }}
       ></div>

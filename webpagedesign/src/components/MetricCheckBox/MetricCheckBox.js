@@ -6,6 +6,7 @@ import "./MetricCheckBox.css";
 
 export default (props) => {
   const [open, setOpen] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
   const descriptionBoxIsOpen = () => {
     setOpen((open) => !open);
@@ -14,23 +15,32 @@ export default (props) => {
   return (
     <div className="Box__Sizing">
       <div className="Box__Item">
-        {props.boxChecked ? (
+        {isChecked ? (
           <div className="CheckBox-styling">
             <img
               style={{ width: "19px", height: "19px" }}
               src={CheckedBox}
               alt="Box-checked"
-              onClick={props.boxUnchecked}
+              id={props.checkboxId}
+              onClick={() => {
+                props.checkSubtract();
+                setIsChecked(false);
+              }}
             />
           </div>
         ) : (
           <div className="Checkbox__Style">
             <div
               className="Checkbox__Style-container"
-              onClick={props.boxIsChecked}
+              id={props.checkboxId}
+              onClick={() => {
+                props.checkAdd();
+                setIsChecked(true);
+              }}
             />
           </div>
         )}
+
         <div className="Label__Dropdown-item__Spacing">
           <div>
             <label className="Label__Styling">{props.children}</label>

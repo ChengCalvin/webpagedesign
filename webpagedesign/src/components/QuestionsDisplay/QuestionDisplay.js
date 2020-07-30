@@ -5,69 +5,49 @@ import MetricCheckBox from "../MetricCheckBox/MetricCheckBox";
 import "./QuestionDisplay.css";
 
 export default (props) => {
-  const [isChecked, setIsChecked] = useState(null);
-  const [isCheckedCounter, setIsCheckedCounter] = useState(0);
-
-  const isCheckedHandler = (id) => {
-    setIsChecked(id);
-    setIsCheckedCounter((isCheckedCounter) => isCheckedCounter + 1);
-  };
-  const isUncheckedHandler = (id) => {
-    setIsChecked(null);
-    setIsCheckedCounter((isCheckedCounter) => isCheckedCounter - 1);
-  };
-
   const questions = [
     {
       Question: "What should you be looking at?",
       Question_Description:
         "Check these metrics to stay on top of your financial health",
       metric: [
-        { Label: "Revenue", Description: "123", checkedId: 0 },
+        { Label: "Revenue", Description: "123" },
         {
           Label: "Cost of Goods Sold (COGS)",
           Description: "blah blah blah",
-          checkedId: 1,
         },
         {
           Label:
             "EBITDA (Earnings before Interest, Tax, Deprecitation & Amortization)",
           Description: "wow ebidta?",
-          checkedId: 2,
         },
-        { Label: "Net Income", Description: "blah blah blah", checkedId: 3 },
+        { Label: "Net Income", Description: "blah blah blah" },
         {
           Label: "Abnormal Costs",
           Description: "blah blah blah",
-          checkedId: 4,
         },
         {
           Label: "Days Receivables (aka Days Sales Outstanding)",
           Description: "blah blah blah",
-          checkedId: 5,
         },
-        { Label: "Inventory", Description: "blah blah blah", checkedId: 6 },
+        { Label: "Inventory", Description: "blah blah blah" },
         {
           Label: "Days Inventory Outstanding (DIO)",
           Description: "blah blah blah",
-          checkedId: 7,
         },
         {
           Label: "Days Payable Outstanding (DPO)",
           Description: "blah blah blah",
-          checkedId: 8,
         },
-        { Label: "Quick Ratio", Description: "blah blah blah", checkedId: 9 },
+        { Label: "Quick Ratio", Description: "blah blah blah" },
         {
           Label: "Debt to Total Assets (Debt Ratio)",
           Description: "blah blah blah",
-          checkedId: 10,
         },
-        { Label: "Gross Margin", Description: "blah blah blah", checkedId: 11 },
+        { Label: "Gross Margin", Description: "blah blah blah" },
         {
           Label: "Net Profit Margin",
           Description: "blah blah blah",
-          checkedId: 12,
         },
       ],
     },
@@ -79,7 +59,6 @@ export default (props) => {
         {
           Label: "Fill out Income Statement",
           Description: "Here is the form to fill",
-          checkedId: 13,
         },
       ],
     },
@@ -91,7 +70,6 @@ export default (props) => {
         {
           Label: "Fill out Cash Flow Statement",
           Description: "Here is the form to fill",
-          checkedId: 14,
         },
       ],
     },
@@ -110,10 +88,9 @@ export default (props) => {
               return (
                 <MetricCheckBox
                   value={metric.Description}
-                  key={metric.Label}
-                  boxChecked={isChecked === metric.checkedId}
-                  boxUnchecked={() => isUncheckedHandler(metric.checkedId)}
-                  boxIsChecked={() => isCheckedHandler(metric.checkedId)}
+                  key={i}
+                  checkAdd={props.checkAdd}
+                  checkSubtract={props.checkSubtract}
                 >
                   {metric.Label}
                 </MetricCheckBox>

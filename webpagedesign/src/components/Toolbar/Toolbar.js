@@ -38,8 +38,8 @@ const Toolbar = (props) => {
             <p>powered by NorthOne</p>
           </div>
         </div>
-        <div>
-          {/* <ItemCheckedCounter>{props.itemCheckedCounter}</ItemCheckedCounter> */}
+        <div className="CheckedBox__Counter">
+          {<ItemCheckedCounter>{props.counter}</ItemCheckedCounter>}
         </div>
 
         <div className="Toolbar__navigation-items">
